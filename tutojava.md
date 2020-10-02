@@ -26,3 +26,6 @@ On retrouve différents types de mots-clés; des mots-clés pour déclarer des o
 
 * Et voici les mots-clés pour gérer des exceptions:
     * `throw`, `throws`, `try`, `catch` & `finally`.
+
+
+modif
