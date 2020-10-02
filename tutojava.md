@@ -28,4 +28,3 @@ On retrouve différents types de mots-clés; des mots-clés pour déclarer des o
     * `throw`, `throws`, `try`, `catch` & `finally`.
 
 
-modif
