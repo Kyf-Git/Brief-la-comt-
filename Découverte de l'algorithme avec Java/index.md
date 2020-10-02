@@ -1,19 +1,41 @@
 
 ## Table des matières
 
-1. [Introduction](#introduction)
-2. [La notion de variable](#lanotiondevariable)
-3. [Les mots clefs](#lesmotsclefs)
-4. [Les opérateurs](#lesoperateurs)
-5. [L'évaluation](#levaluation)
-6. [L'assignation](#lassignation)
-7. [L'instruction](#linstruction)
-8. [Le bloc d'instructions](#leblocdinstruction)
-9. [Le commentaire](#lecommentaire)
-10. [La condition](#lacondition)
-11. [La boucle](#laboucle)
-12. [La fonction (ou méthode de classe)](#lafonction)
-13. [Les paramètres](#lesparametres)
+- [<a href ="lanotiondevariable"></a>la Notion de variable](#la-notion-de-variable)
+  - [Le concept de variables](#le-concept-de-variables)
+  - [La déclaration des variables:](#la-déclaration-des-variables)
+  - [Affectation d'une donnée à une variable:](#affectation-dune-donnée-à-une-variable)
+  - [Portée (visibilité) des variables :](#portée-visibilité-des-variables-)
+  - [Définitions de constantes:](#définitions-de-constantes)
+    - [<a href="lesmotsclefs"></a> Les mots clés](#-les-mots-clés)
+    - [<a href="lesoperateurs"></a> Les opérateurs](#-les-opérateurs)
+  - [<a href="levaluation"></a>L'évaluation](#lévaluation)
+  - [<a href="lassignation"></a>L'assignation](#lassignation)
+- [<a href="linstruction"></a>Instructions](#instructions)
+- [<a href="leblocdinstruction"></a> Le bloc d'instructions](#-le-bloc-dinstructions)
+    - [Déclaration d'un bloc d'instructions](#déclaration-dun-bloc-dinstructions)
+    - [Les commentaires](#les-commentaires)
+- [<a href=""></a>Les condition](#les-condition)
+    - [Exemple d'une condition](#exemple-dune-condition)
+    - [Les opérateurs de comparaison](#les-opérateurs-de-comparaison)
+    - [Autres exemples](#autres-exemples)
+- [Sinon (else)](#sinon-else)
+    - [Exemple avec Else](#exemple-avec-else)
+    - [Exemple avec Else If](#exemple-avec-else-if)
+- [<a href=""></a>Les boucles](#les-boucles)
+- [La boucle FOR](#la-boucle-for)
+  - [Résultat](#résultat)
+  - [FOR avec une array](#for-avec-une-array)
+- [La boucle WHILE](#la-boucle-while)
+- [La boucle DO... WHILE](#la-boucle-do-while)
+- [Pour aller plus loin](#pour-aller-plus-loin)
+  - [L'instruction *continue*](#linstruction-continue)
+  - [L'instruction *break*](#linstruction-break)
+    - [<a href=""></a>Déclaration d'une méthode de classe](#déclaration-dune-méthode-de-classe)
+- [<a href=""></a> Les paramètres](#-les-paramètres)
+- [Théorie](#théorie)
+- [Utilisation](#utilisation)
+- [Cas d'exemple: pour conditionner](#cas-dexemple-pour-conditionner)
 
 # <a href ="lanotiondevariable"></a>la Notion de variable
 
@@ -201,3 +223,738 @@ Lorsque l’opérande de gauche n’est pas un tableau, il s'éxecute dans cet o
 4. Effectuer l’opération binaire indiquée par l’opérateur composé
 
 5. Convertir le résultat de l’opération binaire en type de variable de gauche **(casting implicite)** . Affecter le résultat converti à la variable de gauche
+
+## <a href="lassignation"></a>L'assignation
+
+En programmation informatique, une affectation, ou assignation, est une structure qui permet d'attribuer une valeur à une variable.
+
+
+En JAVA, **il faut déclarer toute les variables en précisant leur type** . On peut éventuellement ajouter des modificateurs. Ainsi déclarer une variable « final » revient à créer une constante car le compilateur refusera toutes les instructions modifiant la valeur de cette variable.  
+On peut effectuer une affectation ou assignation (donner une valeur) en déclarant une variable.  
+**Lors de sa création une variable reçoit toujours une valeur par défaut** . (0 pour les entiers, 0.0 pour les flottants, false pour les booléens, null pour les objets).
+
+**Le signe égal ( = ) est le symbole basique d'assignation.**
+
+
+```
+// déclaration de a comme entier
+int a ;
+//affectation de a avec la valeur 3
+a = 3;
+```
+
+Cette instruction déclare une nouvelle variable x , attribue à x la valeur de 3 et renvoie 3 .
+
+Il existe d'autre opérateur d'assignation :
+
+    = Affecte une valeur à une variable
+    += Addition
+    -= Soustraction
+    *= Multiplication
+    /= Division
+    %= Modulo
+    &= ET logique et binaire
+    |= OU logique et binaire
+
+*Exemple* : Si l’on a x=4 et que l’on fait x+=3, alors x vaudra 7.   
+
+Ceci est la même chose avec tous ces opérateurs d'assignation.
+
+
+# <a href="linstruction"></a>Instructions
+
+C'est quoi?
+<p><br>Une instruction informatique désigne une étape dans un programme informatique.</br>
+<p>Une instruction dicte à l'ordinateur l'action nécessaire qu'il doit effectuer avant de passer à l'instruction suivante. </p>
+<p>Un programme informatique est constitué d'une suite d'instructions.</p>
+
+En java, une instruction se termine par un point virgule `;`
+
+```exemples
+
+System.out.println("Hello World"); // ceci est une instruction
+
+int resultat = 1 + 1; // ceci est une autre instruction
+
+String resultat2 = "Je suis un texte" // une troisième instruction
+
+```
+
+Les instructions se lisent de haut en bas.
+
+```en java
+
+int nombre1 = 1; // première instruction
+
+int nombre2 = 1 + 1; //deuxième instruction
+
+int nombre3 = nombre2 + nombre1; // troisième instruction
+
+```
+
+Dans le code précédent, les instructions sont soit indépendantes, soit dépendantes.
+
+`nombre1` et `nombre2` se voient assignés une valeur par assignation directe ou via une opération mathématique `(1 + 1)`
+
+`nombre3` se voit assigné une valeur via l'addition de `nombre1` et `nombre2`.
+
+Il ne serait pas possible d'assigner de à `nombre3` si `nombre1` et `nombre2` avaient été déclarés après.
+
+```en java
+
+int nombre3 = nombre2 + nombre1; // Erreur, nombre1 et nombre2 n'existent pas encore
+
+int nombre1 = 1; 
+
+int nombre2 = 1 + 1; 
+
+```
+
+# <a href="leblocdinstruction"></a> Le bloc d'instructions
+
+Avant de définir ce qu'est un bloc d'instruction, il faut définir ce qu'est une instruction.
+
+Une instruction informatique désigne une étape dans un programme informatique. 
+
+Une instruction dicte à l'ordinateur l'action nécessaire qu'il doit effectuer avant de passer à l'instruction suivante. 
+
+En java, une instruction se termine par un point virgule `;`
+
+```java
+
+System.out.println("Hello World"); // ceci est une instruction
+
+int resultat = 1 + 1; // ceci est une autre instruction
+
+String resultat2 = "Je suis un texte" // une troisième instruction
+
+```
+
+Les instructions se lisent de haut en bas.
+
+```java
+
+int nombre1 = 1; // première instruction
+
+int nombre2 = 1 + 1; //deuxième instruction
+
+int nombre3 = nombre2 + nombre1; // troisième instruction
+
+```
+
+Dans le code précédent, les instructions sont soit indépendantes, soit dépendantes.
+
+`nombre1` et `nombre2` se voient assignés une valeur par assignation directe ou via une opération mathématique `(1 + 1)`
+
+`nombre3` se voit assigné une valeur via l'addition de `nombre1` et `nombre2`.
+
+Il ne serait pas possible d'assigner `nombre1` et `nombre2` à `nombre3` si `nombre1` et `nombre2` avaient été déclarés après.
+
+```java
+int nombre3 = nombre2 + nombre1; // Erreur, nombre1 et nombre2 n'existent pas encore
+
+int nombre1 = 1; 
+
+int nombre2 = 1 + 1; 
+
+```
+
+Un programme informatique est constitué d'une suite d'instructions qui s'exécutent dans un `bloc d'instructions`.
+
+### Déclaration d'un bloc d'instructions
+
+En java, un bloc d'instructions se déclare entre crochets `{}`
+
+Les conditions `if/else/else if` sont des blocs d'instructions.
+
+```java
+
+if(true){
+    /*
+    instruction 1;
+    instruction2;
+    ...
+    */
+}else{
+    /*
+    instruction 1;
+    instruction2;
+    ...
+    */
+}else{
+    /*
+    instruction 1;
+    instruction2;
+    ...
+    */
+}
+```
+
+Les boucles `for/while/do while` sont des blocs d'instructions.
+
+```java
+    for(int i=0;i<100;i++){
+        /*
+    instruction 1;
+    instruction2;
+    ...
+    */
+    }
+
+    while(true){
+        /*
+    instruction 1;
+    instruction2;
+    ...
+    */
+    }
+
+    do{
+/*
+    instruction 1;
+    instruction2;
+    ...
+    */
+    }while(true);
+```
+
+Les méthodes de classe sont des blocs d'instruction.
+
+```java
+public void function bonjour(){
+    /*
+    instruction 1;
+    instruction2;
+    ...
+    */
+}
+```
+Les classes sont des blocs d'instruction.
+
+```java
+
+public class MaClasse{
+    
+    public void method1(){}
+
+    public void method2(){}
+
+    //...
+}
+```
+
+Chaque bloc d'instruction définit la durée de vie des instructions qui sont déclarées à l'intérieur.
+
+Ainsi dans une fonction, les instructions à l'intérieur ne sont pas accessibles à l'extérieur. Les variables déclarées à l'intérieur n'existent plus une fois le bloc d'instruction terminé
+
+```java
+
+public function MaMethode(int nombre, int nombre2){
+    int addition =  nombre1 + nombre2;
+
+    return addition;
+}
+
+int resultat = MaMethode(10,10);
+
+System.out.println(addition) // Erreur, addition n'existe pas en dehors de la méthode MaMethode
+
+```
+
+Si une variable est déclarée dans un bloc d'instruction, elle n'existe plus en dehors de ce bloc.
+
+```java
+
+if(true){
+    int nombre = 10;
+}else{
+    nombre = 20; //Erreur, nombre n'existe que dans if, pas dans else
+}
+```
+
+Par contre
+
+```java
+
+public void function maMethode(){
+    int nombre = 0;
+
+    if(true){
+        nombre = 10; //ok
+    }else{
+        nombre = 20; //ok
+    }
+}
+
+
+```
+
+`nombre` est défini en amont des blocs d'instruction if et else dans la méthode `maMethode`, les blocs d'instruction enfants peuvent donc récupérer la variable `nombre`.
+
+Un bloc d'instruction enfant peut lire les variables de son parent mais pas l'inverse, la fin d'une instruction signifiant la fin de vie de toutes les instructions à l'intérieur. 
+
+Comme le bloc d'instruction parent n'est pas fini, ses variables sont encore accessibles.
+
+### Les commentaires
+
+
+Les commentaires permettent de rendre votre code lisible et surtout d'en faciliter ultérieurement la maintenance.
+
+En général, l'insertion de commentaire se fait soit en fin de ligne, soit sur une nouvelle ligne mais en aucun cas au sein d'une ligne de commande.
+
+> ♦Ils ne sont pas pris en compte par le compilateur donc ils ne sont pas inclus dans le pseudo code
+♦ils ne terminent pas par un ;
+♦Il existe trois types de commentaires en Java.
+♦Types de commentaires en Java :
+
+**1-Commentaire sur une seule ligne**
+La première consiste à placer un double slash (//) 
+♦Syntaxe:
+`public class Main {
+  public static void main(String[] args) {
+    //Afficher le message Hello World!
+    System.out.println("Hello World!");
+  }
+}`
+♦Sortie: Hello World!
+
+**2-Commentaire sur plusieurs lignes**
+La seconde solution est d'encadrer le texte par un slash suivi d'une étoile (/*) et la même séquence inversée (*/)
+
+```java
+
+♦Syntaxe:
+`/*
+  Ceci est un commentaire 
+  sur plusieurs 
+  lignes
+*/`
+
+♦Example:
+`public class Main {
+  public static void main(String[] args) {
+    /*
+        Déclarer et afficher
+        le message Hello World!
+    */
+    String str = "Hello World!";
+    System.out.println(str);
+  }
+}`
+♦Sortie: Hello World!
+```
+
+**3-Commentaire de documentation**
+Ce type de commentaires est généralement utilisé lors de l’écriture du code pour un projet, car il permet de générer une page de documentation de référence, qui peut être utilisée pour obtenir des informations sur les méthodes, ses paramètres, etc.
+
+```java
+
+♦Syntaxe:
+`**
+*
+*-Ceci est un Commentaire 
+*- de documentation
+*
+**/`
+♦Example:
+` /**
+ *
+ *Programme Java pour déclarer et afficher
+ *le message Hello World!
+ *-
+ *- @author  Thomas babtise
+ *-@version 2.5 
+ *-@since   2021-12-10
+ *-@link    www.waytolearnx.com
+ *-
+ **/
+public class Main {
+  public static void main(String[] args) {
+    String str = "Hello World!";
+    System.out.println(str);
+  }
+}`
+
+♦Sortie: Hello World!
+
+```
+
+
+# <a href=""></a>Les condition
+
+
+
+Une condition va vous permettre d'exécuter une portion de code ou non en fonction du résultat de variables booléennes, c'est à dire que vous pourrez dire "si X est faux alors je fais ça, sinon ceci et si aucune des conditions précédentes n'est remplie, je ferais plutôt cela".
+
+### Exemple d'une condition
+
+```java
+public boolean variable = true;
+
+if(variable == true)
+{
+     //Si variable = a vrai(true) alors on execute ce code
+     System.out.println("La variable est vrai");
+}
+```
+
+### Les opérateurs de comparaison
+
+Permet de comparer des valeurs ou de savoir si la condition est vrai ou fausse 
+
+```java
+public int var = 5;
+```
+
+| Opérateur | Dénomination                    | Effet                                                        | Exemple  | Résultat                                     |
+| --------- | ------------------------------- | ------------------------------------------------------------ | -------- | -------------------------------------------- |
+| ==        | opérateur d'égalité             | Compare deux valeurs et vérifie leur égalité                 | var == 5 | Retourne vrai si var égale 5                 |
+| <         | opérateur d'infériorité stricte | Verifie qu'une variable est strictement inférieure           | var < 4  | Retourne faux car 5 et pas plus petit que 4  |
+| <=        | Opérateur d'inféririoté         | Vérifie qu'une variable inférieure ou egale                  | var <= 5 | Retourne vrai car 5 et egale a 5             |
+| >=        | Opérateur de superiorité        | Vérifie qu'une variable est supérieure ou égale à une valeur | var >= 2 | Retourne vrai car 5 et superieur a 2         |
+| !=        | Operateur de différence         | Vérifie qu'une variable est supérieure ou égale à une valeur | var != 5 | Retourne faux car 5 n'est pas different de 5 |
+
+### Autres exemples 
+
+```java
+public int variable = 5;
+
+if(variable == 5)
+{
+     //Si variable == 5 on execute ce code
+     System.out.println("La variable est a 5 donc le code s'execute");
+}
+```
+
+```java
+public int variable = 10;
+
+if(variable <= 5)
+{
+     //Si variable est inférieure ou egale 5 on execute ce code
+     System.out.println("Ce code ne s'execute pas");
+}
+```
+
+# Sinon (else)
+Il existe une autre facon d'écrire des conditions que seulement avec des si (if) on peut ecrire une condition avec un sinon(else) à la suite d'un if(si), else signifie que si une condition et pas vrai alors on execute un autre bout de code 
+
+
+### Exemple avec Else
+
+```java
+public int variable = 10;
+
+if(variable <= 5)
+{
+     //Si variable est inférieure ou egale 5 on execute ce code
+     System.out.println("Ce code ne s'execute pas");
+} else
+{
+    //Sinon on execute ce code
+    System.out.println("Ce code s'execute");
+}
+```
+
+On peut aussi combiné un else avec un if
+### Exemple avec Else If
+```java
+public int variable = 10;
+
+if(variable <= 5)
+{
+     //Si variable est inférieure ou egale 5 on execute ce code
+     System.out.println("Ce code ne s'execute pas");
+} else if (variable == 10)
+{
+    //Sinon si variable == 10 on execute ce code
+    System.out.println("Ce code s'execute");
+}
+```
+
+
+# <a href=""></a>Les boucles
+
+
+Les boucles permettent de **répéter une ou plusieurs instructions**, selon les conditions désirées.
+
+On en compte plusieurs types:
+<br>
+
+# La boucle FOR
+
+Elle permet de contrôler exactement le nombre de répétitions (d'*itérations*) de la boucle.
+C'est la plus compliquée à appréhender de toutes parce qu'elle demande plusieurs paramètres.
+Sa structure est composée de telle manière:
+
+```java
+for( <initialisation> ; <condition> ;  <incrémentation>) {
+    <actions>
+}
+```
+
+Souvent, on utilise une variable temporaire qui garde le compte du nombre d'itérations. Elle est souvent appelée `i` comme *index*, et est un point de repère pour la boucle et le développeur ; mais elle peut s'appeler n'importe comment.
+
+- Dans l'**initialisation** de la boucle, on définit quel est l'état de la boucle avant sa première répétition ; par exemple
+`int i = 0`.
+Dans cet exemple, on définit une variable i étant égale à 0.
+
+- Dans la **condition** de la boucle, on définit quel est la condition d'arrêt de la boucle ; par exemple
+`i <= 20`.
+Dans cet exemple, la boucle se répétera tant que la valeur de notre *i* sera inférieure ou égale à 20.
+
+- Dans le paramètre d'**incrémentation** de la boucle, on définit ce qui change à chaque répétition, et qui va permettre à la boucle de se finir à un moment donné. Par exemple:
+`i++`.
+Dans cet exemple, à chaque répétition de la boucle, la valeur de `i` s'augmente de 1.
+
+## Résultat
+
+Voilà ce que donne nos exemples appliqués ensemble:
+
+```java
+for( int i=0 ; i <= 20 ; i++){
+    System.out.println(i);
+}
+```
+
+Cet exemple dans la console nous renverra à chaque répétition la valeur de `i`, jusqu'à 20.
+
+## FOR avec une array
+
+On peut utiliser For pour faire une action pour chaque variable d'une array, par exemple :
+
+```java
+for (int i=0; i<myArray.length; i++) {
+    System.out.println(myArray[i]);
+}
+```
+
+Cet exemple enverra chaque objet de l'array dans la console tour à tour.
+<br>
+
+# La boucle WHILE
+
+La boucle while permet de créer une boucle avec pour seule instruction sa condition de répétition (s'imaginer while comme "*tant que* \<condition>, faire \<actions>".
+Elle s'écrit comme dans cet exemple:
+
+```java
+while(i<20){
+    i++;
+}
+```
+
+<br>
+
+# La boucle DO... WHILE
+
+Cette boucle ressemble beaucoup à la précédente, à l'exception que sa condition est écrite après son action, garantissant que la boucle s'éxécute au moins une fois.
+Exemple:
+
+```java
+int i = 0;
+
+do{
+    System.out.println("coucou");
+} while(i ==1);
+```
+
+Affichera une fois *"coucou"*, même si la condition n'est jamais respectée.
+
+<br>
+
+# Pour aller plus loin
+
+## L'instruction *continue*
+
+Dans une boucle, on peut utiliser `continue` pour dire qu'une partie du code ne doit pas s’exécuter selon certaines conditions:
+
+```java
+while(i<20){
+    i++;
+        if(i ==5){
+            continue;
+        }
+    System.out.println("coucou");
+    }
+```
+
+La suite du code ne s'exécute pas lorsque `i` est égal à 5, et donc n'affichera pas *"coucou"* à ce moment là.
+
+## L'instruction *break*
+
+On peut utiliser `break` pour arrêter une boucle à un moment voulu, même si la condition de la boucle n'est pas encore respectée:
+
+```java
+while(i<20){
+    i++;
+    if(i ==5){
+        break;
+    }
+}
+````
+
+Au moment où `i` sera égal à 5, la boucle s'arrêtera complêtement, alors même que `i` n'est pas encore supérieur ou égal à 20.
+
+### La fonction (appelée méthode de classe en Java)
+
+La fonction ou méthode de classe est un bloc d'instruction réutilisable permettant de recevoir des arguments.
+
+Plutôt que de répéter plusieurs opérations identiques, il suffit de créer une fonction et de mettre ces opérations à l'intérieur.
+
+Aisin si l'on voulait effectuer une opération mathématiques sur deux valeurs on pourrait le faire de cette façon:
+
+```java
+
+int addition = 2+2;
+
+int soustration = 5 - 3;
+
+float division = 10 / 2;
+
+int multiplication = 4 * 7;
+
+```
+
+Grâce aux fonctions, il est possible d'encapsuler ces opérations:
+
+```java
+
+public int function Addition(int nombre1, int nombre2){
+    return nombre1 + nombre2;
+}
+
+public int function Soustraction(int nombre1, int nombre2){
+    return nombre1 - nombre2;
+}
+
+public float function Division(float nombre1, float nombre2){
+    return nombre1 / nombre2;
+}
+
+public int function Multiplication(int nombre1, int nombre2){
+    return nombre1 * nombre2;
+}
+
+```
+
+### <a href=""></a>Déclaration d'une méthode de classe
+
+La déclarion d'une méthode de classe/fonction s'éffectue d'abord par la déclaration de sa portée.
+
+- `public` : accès publique. La méthode est disponible depuis partout, par toutes les classes.
+- `protected` : accès protégé. La méthode n'est disponible qu'à l'intérieur d'une classe. Elle peut être donc visible pour les classes héritantes. Elle est aussi visible pour des classes non héritantes mais étant du même package.
+- `private` : accès privé. La méthode n'est disponible qu'à l'intérieur d'une classe. Héritée, elle n'est pas visible.
+ 
+Puisqu'en java, tout est objet, une méthode appartient obligatoirement à une classe.
+
+une méthode de classe peut être déclarée `static`. Quand une méthode est déclarée `static`, elle ne peut être appelée que par la classe elle-même et non par une instance de classe. 
+
+```java
+
+class MaClass{
+    public static void MaMethodeStatique(){
+        System.out.print.ln('Je suis appelée par une classe");
+    }
+
+    public void MaMethode(){
+        System.out.print.ln('Je suis appelée par une instance de classe");
+    }
+}
+
+```
+`MaMethodeStatique` ne peut être appelée que par `MaClass` quand `MaMethode` ne pourra être appelée que par une instance de `MaClass`
+
+Il faut ensuite définir le type de retour de la fonction.
+Une fonction peut ou non retourner un résultat.
+
+Sans retour de résultat, il faudra déclarer la méthode par le mot clé `void`.
+
+Selon la valeur de retour, il faudra déclarer le retour comme étant un `int`,`float`,`char`,`String`...
+
+La fonction se déclare avec le mot clé `function` puis par le nom qu'on veut lui donner. Ce sera ensuite son identifiant pour l'appeller (`Addition`, `Soustraction`...).
+
+Les arguments qu'on veut injecter dans cette fonction se déclarent entre parenthèses `()`.
+
+Le traitement des arguments et autres opérations propres à la fonction se déclarent entre crochets  `{ }`. 
+
+Si la méthode renvoit un résultat, le bloc d'instruction se terminera par l'instruction `return` puis le résultat à retourner.
+
+Une fois la fonction déclarée, il est ensuite possible de l'utiliser à l'infini en l'appelant dans notre code:
+
+
+
+```java
+
+int resultatAddition = Addition(5,10);
+int resultatAddition2 = Addition(6,9);
+
+int resultatSoustraction = Soustraction(100,50);
+int resultatSoustraction2 = Soustraction(4,1);
+
+float resultatDivision = Division(10.0,4.0);
+float resultatDivision2 = Division(300.0,8.0);
+
+int resultatMultiplication = Multiplication(2,2);
+int resultatMultiplication2 = Multiplication(5,9);
+
+```
+
+# <a href=""></a> Les paramètres
+
+Les paramètres sont utilisées **par les fonctions** pour leur **donner du matériel avec lequel travailler**.
+
+# Théorie
+
+Lors de la déclaration d'une fonction, on lui indique à l'avance les outils dont elle aura besoin, entre parenthèses, juste après le nom de la fonction.
+On sépare plusieurs paramètres par des virgules.
+Exemple:
+
+```java
+
+fonction maFonction(int monParametre){
+    <actions>
+}
+
+```
+
+# Utilisation
+
+Lors de **l'appel** d'une fonction, on donne entre parenthèses les valeurs que la fonction utilisera comme paramètres.
+Exemple:
+
+
+```java
+
+fonction monProfil(String monAge, String monPrenom){
+    return monPrenom + " a " + monAge + "ans."
+}
+
+String prenom = "Jean-Bob";
+
+monProfil("12", prenom);
+
+```
+
+Notre fonction renverra ainsi *"Jean-Bob a 12 ans"*
+
+# Cas d'exemple: pour conditionner
+
+On peut aussi utiliser des paramètres pour donner des **conditions** pour l’exécution du code au sein d'une fonction
+Exemple: 
+
+```java
+
+bool buMonCafé = true;
+bool prisMonPC = true;
+
+bool jeSuisPrêt = (buMonCafé && prisMonPC);
+
+fonction commencerJournee(bool ready){
+    if(ready){
+        aller_a_simplon();
+    }
+}
+
+commencerJournee(jeSuisPrêt);
+
+```
