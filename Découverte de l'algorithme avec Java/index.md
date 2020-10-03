@@ -2,7 +2,7 @@
 
 1. [La notion de variable](#variable-notion)
 2. [Les types de variable](#variable-type)
-3. [Les mots clés](#mots-clé)
+3. [Les mots clés](#mot-cle)
 4. [Les opérateurs](#operateurs)
 5. [L'évaluation](#evaluation)
 6. [L'assignation](#assignation)
@@ -14,7 +14,7 @@
 12. [La fonction](#fonction)
 13. [Les paramètres](#parametre)
 
-# <a href="variable-notion"></a>la Notion de variable
+# <a id="variable-notion"></a>la Notion de variable
 
 ## Le concept de variable
 
@@ -84,7 +84,7 @@ aura pour effet de définir une variable de type _int_ possèdant la valeur 12 e
 
 
 
-# <a href="variable-type"></a>Les types de variables :
+# <a id="variable-type"></a>Les types de variables :
 
 
 **Les variables** se divisent en plusieurs **types**, permettant ainsi de stocker des données différentes selon le besoin.
@@ -136,7 +136,7 @@ test = true; // les booléens et les entiers sont différents.
 float = 32.4f; // le f différencie les floats des doubles.
 ```
 
-# <a href="mots-clé"></a> Les mots clés
+# <a id="mot-cle"></a> Les mots clés
 
 Les mots-clés sont des termes spécifiques au langage de programmation, certains sont utilisables par plusieurs langages et d'autres spécifiques à un langage.
 On trouve plus de 50 mots clés qui ont les usages propres en java.
@@ -156,7 +156,7 @@ pours les branchements; "if", "else", "return", "break", "assert", "switch", "sy
 Et voici les mots-clés pour gérer des exceptions; "throw", "throws", "try", "catch" & "finally"
 
 
-# <a href="operateurs"></a> Les opérateurs
+# <a id="operateurs"></a> Les opérateurs
 
 Les opérateurs sont des symboles permettant de manipuler et d’effectuer des operations mathématiques sur des variables, il en existe plusieurs types:
 
@@ -229,7 +229,7 @@ Permet de vérifier si des conditions sont vraies
 | **&&**    | ET logique   | Retourne true si les deux conditions valent true (ou false sinon)            |
 | **!**     | NON logique  | Retourne true si la variable vaut false, et false si elle vaut true)         |
 
-# <a href="evaluation"></a>L'évaluation 
+# <a id="evaluation"></a>L'évaluation 
 
 Lorsque une opération doit avoir lieux, la priorité opératoire s'applique. Par exemple, comme vu précédemment, les variables de type *double* contiennent plus d'informations de type *int*.
 
@@ -260,7 +260,7 @@ Lorsque l’opérande de gauche n’est pas un tableau, il s'éxecute dans cet o
 
 5. Convertir le résultat de l’opération binaire en type de variable de gauche **(casting implicite)** . Affecter le résultat converti à la variable de gauche
 
-# <a href="assignation"></a>L'assignation
+# <a id="assignation"></a>L'assignation
 
 En programmation informatique, une affectation, ou assignation, est une structure qui permet d'attribuer une valeur à une variable.
 
@@ -297,11 +297,13 @@ Il existe d'autre opérateur d'assignation :
 Ceci est la même chose avec tous ces opérateurs d'assignation.
 
 
-# <a href="instruction"></a> Les Instructions
+# <a id="instruction"></a> Les Instructions
 
-<p><br>Une instruction informatique désigne une étape dans un programme informatique.</br>
-<p>Une instruction dicte à l'ordinateur l'action nécessaire qu'il doit effectuer avant de passer à l'instruction suivante. </p>
-<p>Un programme informatique est constitué d'une suite d'instructions.</p>
+Une instruction informatique désigne une étape dans un programme informatique.
+
+Une instruction dicte à l'ordinateur l'action nécessaire qu'il doit effectuer avant de passer à l'instruction suivante.
+
+Un programme informatique est constitué d'une suite d'instructions.
 
 En java, une instruction se termine par un point virgule `;`
 
@@ -345,7 +347,7 @@ int nombre2 = 1 + 1;
 
 ```
 
-# <a href="bloc-instruction"></a> Le bloc d'instructions
+# <a id="bloc-instruction"></a> Le bloc d'instructions
 
 Avant de définir ce qu'est un bloc d'instruction, il faut définir ce qu'est une instruction.
 
@@ -530,7 +532,7 @@ Un bloc d'instruction enfant peut lire les variables de son parent mais pas l'in
 
 Comme le bloc d'instruction parent n'est pas fini, ses variables sont encore accessibles.
 
-# <a href="commentaire"></a>Les commentaires
+# <a id="commentaire"></a>Les commentaires
 
 
 Les commentaires permettent de rendre votre code lisible et surtout d'en faciliter ultérieurement la maintenance.
@@ -615,7 +617,7 @@ public class Main {
 ```
 
 
-# <a href="#condition"></a>Les conditions
+# <a id="condition"></a>Les conditions
 
 
 
@@ -708,13 +710,13 @@ if(variable <= 5)
 ```
 
 
-# <a href=""></a>Les boucles
+# <a id="boucle"></a>Les boucles
 
 
 Les boucles permettent de **répéter une ou plusieurs instructions**, selon les conditions désirées.
 
 On en compte plusieurs types:
-<br>
+
 
 # La boucle FOR
 
@@ -765,7 +767,7 @@ for (int i=0; i<myArray.length; i++) {
 ```
 
 Cet exemple enverra chaque objet de l'array dans la console tour à tour.
-<br>
+
 
 # La boucle WHILE
 
@@ -778,7 +780,7 @@ while(i<20){
 }
 ```
 
-<br>
+
 
 # La boucle DO... WHILE
 
@@ -794,10 +796,6 @@ do{
 ```
 
 Affichera une fois *"coucou"*, même si la condition n'est jamais respectée.
-
-<br>
-
-# Pour aller plus loin
 
 ## L'instruction *continue*
 
@@ -830,7 +828,7 @@ while(i<20){
 
 Au moment où `i` sera égal à 5, la boucle s'arrêtera complêtement, alors même que `i` n'est pas encore supérieur ou égal à 20.
 
-### La fonction (appelée méthode de classe en Java)
+## <a id="fonction"></a> La fonction (appelée méthode de classe en Java)
 
 La fonction ou méthode de classe est un bloc d'instruction réutilisable permettant de recevoir des arguments.
 
@@ -872,7 +870,7 @@ public int function Multiplication(int nombre1, int nombre2){
 
 ```
 
-### <a href=""></a>Déclaration d'une méthode de classe
+### <a id=""></a>Déclaration d'une méthode de classe
 
 La déclarion d'une méthode de classe/fonction s'éffectue d'abord par la déclaration de sa portée.
 
@@ -934,7 +932,7 @@ int resultatMultiplication2 = Multiplication(5,9);
 
 ```
 
-# <a href="parametre"></a> Les paramètres
+# <a id="parametre"></a> Les paramètres
 
 En programmation informatique, un paramètre est une donnée manipulée par une section de code et connue du code appelant cette section. 
 
