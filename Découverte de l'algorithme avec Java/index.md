@@ -1,55 +1,38 @@
+# <p style="text-align:center;"> Découverte de l'algorithme avec <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/483px-Java_Logo.svg.png" widht="100px" height="100px"></p>
 
-## Table des matières
+1. [La notion de variable](#variable-notion)
+2. [Les types de variable](#variable-type)
+3. [Les mots clés](#mots-clé)
+4. [Les opérateurs](#operateurs)
+5. [L'évaluation](#evaluation)
+6. [L'assignation](#assignation)
+7. [L'instruction](#instruction)
+8. [Le bloc d'instructions](#bloc-instruction)
+9. [Le commentaire](#commentaire)
+10. [La condition](#condition)
+11. [La boucle](#boucle)
+12. [La fonction](#fonction)
+13. [Les paramètres](#parametre)
 
-- [<a href ="lanotiondevariable"></a>la Notion de variable](#la-notion-de-variable)
-  - [Le concept de variables](#le-concept-de-variables)
-  - [La déclaration des variables:](#la-déclaration-des-variables)
-  - [Affectation d'une donnée à une variable:](#affectation-dune-donnée-à-une-variable)
-  - [Portée (visibilité) des variables :](#portée-visibilité-des-variables-)
-  - [Définitions de constantes:](#définitions-de-constantes)
-    - [<a href="lesmotsclefs"></a> Les mots clés](#-les-mots-clés)
-    - [<a href="lesoperateurs"></a> Les opérateurs](#-les-opérateurs)
-  - [<a href="levaluation"></a>L'évaluation](#lévaluation)
-  - [<a href="lassignation"></a>L'assignation](#lassignation)
-- [<a href="linstruction"></a>Instructions](#instructions)
-- [<a href="leblocdinstruction"></a> Le bloc d'instructions](#-le-bloc-dinstructions)
-    - [Déclaration d'un bloc d'instructions](#déclaration-dun-bloc-dinstructions)
-    - [Les commentaires](#les-commentaires)
-- [<a href=""></a>Les condition](#les-condition)
-    - [Exemple d'une condition](#exemple-dune-condition)
-    - [Les opérateurs de comparaison](#les-opérateurs-de-comparaison)
-    - [Autres exemples](#autres-exemples)
-- [Sinon (else)](#sinon-else)
-    - [Exemple avec Else](#exemple-avec-else)
-    - [Exemple avec Else If](#exemple-avec-else-if)
-- [<a href=""></a>Les boucles](#les-boucles)
-- [La boucle FOR](#la-boucle-for)
-  - [Résultat](#résultat)
-  - [FOR avec une array](#for-avec-une-array)
-- [La boucle WHILE](#la-boucle-while)
-- [La boucle DO... WHILE](#la-boucle-do-while)
-- [Pour aller plus loin](#pour-aller-plus-loin)
-  - [L'instruction *continue*](#linstruction-continue)
-  - [L'instruction *break*](#linstruction-break)
-    - [<a href=""></a>Déclaration d'une méthode de classe](#déclaration-dune-méthode-de-classe)
-- [<a href=""></a> Les paramètres](#-les-paramètres)
-- [Théorie](#théorie)
-- [Utilisation](#utilisation)
-- [Cas d'exemple: pour conditionner](#cas-dexemple-pour-conditionner)
+# <a href ="variable-notion"></a>la Notion de variable
 
-# <a href ="lanotiondevariable"></a>la Notion de variable
+## Le concept de variable
 
-## Le concept de variables
+Une variable est un symbole qui associe un nom à une valeur. 
 
-Une variable est une donnée (un objet ou un type primitif) repérée par son nom, et qui pourra être lu, ou modifiée lors de l'exécution du programme.
- Les variables en langage Java sont typées, c'est-à-dire que les données contenues dans celles-ci possèdent un type, ainsi elles sont donc stockées à une adresse mémoire et occupent un nombre d'octets dépendant du type de donnée stockée.
+En informatique, cette valeur est stockée en mémoire dans l'attente d'un résultat.
+
+Les variables en langage Java sont typées. Elles peuvent être déclarée comme étant un chiffre, un caractère, un chaîne de caractères etc. 
+
+La façon dont elle seront traitées découlera de ce type.
 
 En Java, les noms de variables peuvent être aussi long que l'on désire, toutefois le compilateur(programme qui traite les instructions écrites dans un langage de programmation donné pour les traduire en langage machine, ou « code », utilisé par le processeur d'un ordinateur) ne tiendra compte "que" des 247 premiers caractères. De plus, elles doivent répondre à certains critères :
 
 -   un nom de variable ne peut comporter que des lettres, des chiffres (les caractères _ et $ peuvent être utilisés mais ne devrait pas l'être pour des variables)
 -   un nom de variable ne peut pas commencer par un chiffre et ne doit pas comporter d'espace
 
-Les noms de variables sont sensibles à la casse (Java fait la différence entre les lettres minuscules et majuscules, avec ou sans accent), il faut donc veiller à respecter la casse des noms !  
+Les noms de variables sont sensibles à la casse (majusculte/minuscule). la variable `bonjour` ne sera  pas traitée comme `BonJouR`.
+
 Par convention, un nom de variable est écrit en minuscules, sans accent, ni _ ou $. En revanche lorsqu'il est composé de plusieurs mots, on peut utiliser une majuscule pour l'initiale de chaque nouveau mot.
 
 **Exemples de variables correctes**:
@@ -100,7 +83,60 @@ final int MA_CONSTANTE =12
 aura pour effet de définir une variable de type _int_ possèdant la valeur 12 et ne pouvant pas être modifiée dans la suite du code, auquel cas le compilateur générera une erreur...
 
 
-### <a href="lesmotsclefs"></a> Les mots clés
+
+# <a href="variable-type"></a>Les types de variables :
+
+
+**Les variables** se divisent en plusieurs **types**, permettant ainsi de stocker des données différentes selon le besoin.
+Lors de la **déclaration** d'une variable, il faut spécifier son type. Toute variable, en plus de son nom, se doit d'avoir un type. 
+
+## Les types primitifs :
+
+#### boolean : 
+ne prend en compte que 2 valeurs, **true** et **false**.
+#### char (character) : 
+permet de stocker la valeur Unicode d'un caractère (entre '\u0000' et '\uffff').
+
+### Les types entier :
+
+#### byte : 
+nombre entier relatif très court (entre -128 et 127).
+#### short : 
+nombre entier relatif court (entre -32 768 et 32 767).
+#### int (integrer) : 
+nombre entier relatif (entre -2 147 483 648 et 2 147 483 647).
+#### long : 
+nombre entier relatif court (entre -32 768 et 32 767).
+
+### Les types flottants :
+**float** et **double** se distinguent par la taille de leur représentation, et par conséquent par la précision et l'étendue des valeurs.
+
+#### float : 
+nombre décimal, permettant la virgule (entre − 3 , 4.10^38 et 3 , 4.10^38).
+#### double : 
+nombre décimal, permettant la virgule (entre − 1 , 7.10^308 et 1 , 7.10^308).
+
+
+## Affectation :
+
+Une **affectation** équivaut à mettre une valeur dans une variable.
+Comment affecter la valeur d'une variable?
+
+* taper une valeur littéral après le signe égal : x = 12; test = true;
+* affecter la valeur d'une variable à une autre : y = x;
+* employer une expression combinant les deux : x = y + 3;
+
+#### Exemples : 
+```java
+int taille = 32;
+char initiale = 'j'; // ne pas oublier les ' '
+double d = 431.123; // le point joue le rôle de la virgule.
+boolean test; 
+test = true; // les booléens et les entiers sont différents.
+float = 32.4f; // le f différencie les floats des doubles.
+```
+
+# <a href="mots-clé"></a> Les mots clés
 
 Les mots-clés sont des termes spécifiques au langage de programmation, certains sont utilisables par plusieurs langages et d'autres spécifiques à un langage.
 On trouve plus de 50 mots clés qui ont les usages propres en java.
@@ -120,7 +156,7 @@ pours les branchements; "if", "else", "return", "break", "assert", "switch", "sy
 Et voici les mots-clés pour gérer des exceptions; "throw", "throws", "try", "catch" & "finally"
 
 
-### <a href="lesoperateurs"></a> Les opérateurs
+# <a href="operateurs"></a> Les opérateurs
 
 Les opérateurs sont des symboles permettant de manipuler et d’effectuer des operations mathématiques sur des variables, il en existe plusieurs types:
 
@@ -193,7 +229,7 @@ Permet de vérifier si des conditions sont vraies
 | **&&**    | ET logique   | Retourne true si les deux conditions valent true (ou false sinon)            |
 | **!**     | NON logique  | Retourne true si la variable vaut false, et false si elle vaut true)         |
 
-## <a href="levaluation"></a>L'évaluation 
+# <a href="evaluation"></a>L'évaluation 
 
 Lorsque une opération doit avoir lieux, la priorité opératoire s'applique. Par exemple, comme vu précédemment, les variables de type *double* contiennent plus d'informations de type *int*.
 
@@ -224,7 +260,7 @@ Lorsque l’opérande de gauche n’est pas un tableau, il s'éxecute dans cet o
 
 5. Convertir le résultat de l’opération binaire en type de variable de gauche **(casting implicite)** . Affecter le résultat converti à la variable de gauche
 
-## <a href="lassignation"></a>L'assignation
+# <a href="assignation"></a>L'assignation
 
 En programmation informatique, une affectation, ou assignation, est une structure qui permet d'attribuer une valeur à une variable.
 
@@ -261,9 +297,8 @@ Il existe d'autre opérateur d'assignation :
 Ceci est la même chose avec tous ces opérateurs d'assignation.
 
 
-# <a href="linstruction"></a>Instructions
+# <a href="instruction"></a> Les Instructions
 
-C'est quoi?
 <p><br>Une instruction informatique désigne une étape dans un programme informatique.</br>
 <p>Une instruction dicte à l'ordinateur l'action nécessaire qu'il doit effectuer avant de passer à l'instruction suivante. </p>
 <p>Un programme informatique est constitué d'une suite d'instructions.</p>
@@ -310,7 +345,7 @@ int nombre2 = 1 + 1;
 
 ```
 
-# <a href="leblocdinstruction"></a> Le bloc d'instructions
+# <a href="bloc-instruction"></a> Le bloc d'instructions
 
 Avant de définir ce qu'est un bloc d'instruction, il faut définir ce qu'est une instruction.
 
@@ -495,42 +530,45 @@ Un bloc d'instruction enfant peut lire les variables de son parent mais pas l'in
 
 Comme le bloc d'instruction parent n'est pas fini, ses variables sont encore accessibles.
 
-### Les commentaires
+# <a href="commentaire"></a>Les commentaires
 
 
 Les commentaires permettent de rendre votre code lisible et surtout d'en faciliter ultérieurement la maintenance.
 
 En général, l'insertion de commentaire se fait soit en fin de ligne, soit sur une nouvelle ligne mais en aucun cas au sein d'une ligne de commande.
 
-> ♦Ils ne sont pas pris en compte par le compilateur donc ils ne sont pas inclus dans le pseudo code
-♦ils ne terminent pas par un ;
-♦Il existe trois types de commentaires en Java.
-♦Types de commentaires en Java :
+- Ils ne sont pas pris en compte par le compilateur donc 
+- ils ne sont pas inclus dans le pseudo code
+- ils ne terminent pas par un ;
+- Il existe trois types de commentaires en Java.
+- Types de commentaires en Java :
 
 **1-Commentaire sur une seule ligne**
-La première consiste à placer un double slash (//) 
-♦Syntaxe:
-`public class Main {
+La première consiste à placer un double slash `//` 
+
+```java
+public class Main {
   public static void main(String[] args) {
-    //Afficher le message Hello World!
+    //Afficher le message Hello World en console!
     System.out.println("Hello World!");
   }
-}`
-♦Sortie: Hello World!
+}
+```
+
+
 
 **2-Commentaire sur plusieurs lignes**
 La seconde solution est d'encadrer le texte par un slash suivi d'une étoile (/*) et la même séquence inversée (*/)
 
 ```java
 
-♦Syntaxe:
-`/*
+/*
   Ceci est un commentaire 
   sur plusieurs 
   lignes
 */`
 
-♦Example:
+//Example:
 `public class Main {
   public static void main(String[] args) {
     /*
@@ -540,8 +578,8 @@ La seconde solution est d'encadrer le texte par un slash suivi d'une étoile (/*
     String str = "Hello World!";
     System.out.println(str);
   }
-}`
-♦Sortie: Hello World!
+}
+//Sortie: Hello World!
 ```
 
 **3-Commentaire de documentation**
@@ -549,16 +587,13 @@ Ce type de commentaires est généralement utilisé lors de l’écriture du cod
 
 ```java
 
-♦Syntaxe:
 `**
 *
 *-Ceci est un Commentaire 
 *- de documentation
-*
-**/`
-♦Example:
-` /**
- *
+*/
+ 
+ /**
  *Programme Java pour déclarer et afficher
  *le message Hello World!
  *-
@@ -575,12 +610,12 @@ public class Main {
   }
 }`
 
-♦Sortie: Hello World!
+//sortie: Hello World!
 
 ```
 
 
-# <a href=""></a>Les condition
+# <a href="#condition"></a>Les conditions
 
 
 
@@ -899,62 +934,42 @@ int resultatMultiplication2 = Multiplication(5,9);
 
 ```
 
-# <a href=""></a> Les paramètres
+# <a href="parametre"></a> Les paramètres
 
-Les paramètres sont utilisées **par les fonctions** pour leur **donner du matériel avec lequel travailler**.
+En programmation informatique, un paramètre est une donnée manipulée par une section de code et connue du code appelant cette section. 
 
-# Théorie
+Par exemple, une fonction définit les paramètres qu'elle recevra pour traiter une succession d'intructions.
 
-Lors de la déclaration d'une fonction, on lui indique à l'avance les outils dont elle aura besoin, entre parenthèses, juste après le nom de la fonction.
-On sépare plusieurs paramètres par des virgules.
-Exemple:
 
 ```java
-
-fonction maFonction(int monParametre){
-    <actions>
+fonction direBonjour(String message){
+    System.out.println(message);
 }
+```
+`message` est ici le paramètre de `direBonjour`
 
+Lors de l'utilisation de la fonction, on renseignera les arguments que l'on veut passer en paramètres.
+
+```java
+direBonjour("Salut ça va bien?");
+direBonjour("Hey bonjour vous!");
 ```
 
-# Utilisation
+Les paramètres sont aussi utilisé dans le cadre des conditions et des boucles
 
-Lors de **l'appel** d'une fonction, on donne entre parenthèses les valeurs que la fonction utilisera comme paramètres.
-Exemple:
+```java 
 
+boolean jeSuisVrai = false;
 
-```java
-
-fonction monProfil(String monAge, String monPrenom){
-    return monPrenom + " a " + monAge + "ans."
+if(jeSuisVrai){
+    System.out.println("C'est bien vrai!");
+}else{
+    System.out.println("Ah ba non, pas d'accord!");
 }
 
-String prenom = "Jean-Bob";
+//ou bien
 
-monProfil("12", prenom);
-
-```
-
-Notre fonction renverra ainsi *"Jean-Bob a 12 ans"*
-
-# Cas d'exemple: pour conditionner
-
-On peut aussi utiliser des paramètres pour donner des **conditions** pour l’exécution du code au sein d'une fonction
-Exemple: 
-
-```java
-
-bool buMonCafé = true;
-bool prisMonPC = true;
-
-bool jeSuisPrêt = (buMonCafé && prisMonPC);
-
-fonction commencerJournee(bool ready){
-    if(ready){
-        aller_a_simplon();
-    }
+while(jeSuisVrai){
+    //instructions
 }
-
-commencerJournee(jeSuisPrêt);
-
 ```
