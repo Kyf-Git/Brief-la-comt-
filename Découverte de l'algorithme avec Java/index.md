@@ -80,10 +80,7 @@ final int MA_CONSTANTE =12
 
 aura pour effet de définir une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> de type _int_ possèdant la valeur 12 et ne pouvant pas être modifiée dans la suite du code, auquel cas le compilateur générera une erreur...
 
-
-
 # <a id="variable-type"></a>Les types de variables</a> :
-
 
 **Les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>** se divisent en plusieurs **types**, permettant ainsi de stocker des données différentes selon le besoin.
 Lors de la **déclaration** d'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>, il faut spécifier son type. Toute <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>, en plus de son nom, se doit d'avoir un type. 
@@ -96,7 +93,7 @@ Il existe 8 types primitifs en <a href="https://fr.wikipedia.org/wiki/Java_(tech
 
 `char` : chractère au format unincode (compris entre `\u0000` et `\uffff`).
 
-### Les entiers :
+## Les entiers :
 
 `byte` : nombre entier relatif très court (entre `-128` et `127`).
 
@@ -106,13 +103,12 @@ Il existe 8 types primitifs en <a href="https://fr.wikipedia.org/wiki/Java_(tech
 
 `long` : nombre entier relatif court (entre `-32 768` et `32 767`).
 
-### Les types flottants :
+## Les types flottants :
 `float` et `double` se distinguent par la taille de leur représentation, et par conséquent par la précision et l'étendue des valeurs.
 
 `float` : nombre décimal, permettant la virgule (entre − 3 , 4.10^38 et 3 , 4.10^38).
 
 `double` : nombre décimal, permettant la virgule (entre − 1 , 7.10^308 et 1 , 7.10^308).
-
 
 ## Affectation :
 
@@ -123,7 +119,7 @@ Comment affecter la valeur d'une <a href="https://fr.wikipedia.org/wiki/Variable
 * affecter la valeur d'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> à une autre : y = x;
 * employer une expression combinant les deux : x = y + 3;
 
-#### Exemples : 
+### Exemples : 
 ```java
 int taille = 32;
 char initiale = 'j'; // ne pas oublier les ' '
@@ -133,32 +129,47 @@ test = true; // les booléens et les entiers sont différents.
 float = 32.4f; // le f différencie les floats des doubles.
 ```
 
-# <a id="mot-cle"></a> Les mots clés
+# <a id="mot-cle"></a> Les mots-clés:
 
-Les mots-clés sont des termes spécifiques au langage de programmation, certains sont utilisables par plusieurs langages et d'autres spécifiques à un langage.
+Les <a href="https://thierry-leriche-dessirier.developpez.com/tutoriels/java/mots-cles-java/">mots-clés</a> sont des termes spécifiques au langage de programmation, certains sont utilisables par plusieurs langages et d'autres spécifiques à un langage.
+
 On trouve plus de 50 mots clés qui ont les usages propres en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>.
+
 On ne peut les utiliser que dans un contexte précis et il est impossible de les déclarer en comme noms de classes ou <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>. 
-On retrouve différents types de mots-clés; des mots-clés pour déclarer des objets, <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, des états, des branchements et encore des exceptions.
 
-Les mots pour les objets; "class", "interface", "implements", "enum", "import", "this", "abstract", "extends", "package", "super" &"native".
+On retrouve différents types de <a href="https://thierry-leriche-dessirier.developpez.com/tutoriels/java/mots-cles-java/">mots-clés</a> pour déclarer des objets, des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, des états, des branchements et encore des exceptions.
 
-Les mots pour les types; "boolean", "char", "int", "float", "long", "short", "double", "byte" & "void".
+Déclarer des objets:
 
-Pour les états; "const" , "false", "true", "static", "null", "volatile", "new", "transient", "strictfp".
+ `class`, `interface`, `implements`, `enum`, `import`, `this`, `abstract`, `extends`, `package`, `super`, `native`.
 
-pour les boucles: "do", "for", "goto", "while", "continue".
+Déclarer des types:
 
-pours les branchements; "if", "else", "return", "break", "assert", "switch", "synchronized", "default", "case" & "instanceof".
+`boolean`, `char`, `int`, `float`, `long`, `short`, `double`, `byte` & `void`.
 
-Et voici les mots-clés pour gérer des exceptions; "throw", "throws", "try", "catch" & "finally"
+Déclarer des états:
+
+ `const` , `false`, `true`, `static`, `null`, `volatile`, `new`, `transient`, `strictfp`.
+
+Déclarer des boucles:
+
+`do`, `for`, `goto`, `while`, `continue`.
+
+Déclarer des branchements:
+
+ `if`, `else`, `return`, `break`, `assert`, `switch`, `synchronized`, `default`, `case`, `instanceof`.
+
+Déclarer des exceptions:
+
+ `throw`, `throws`, `try`, `catch`, `finally`
 
 
 # <a id="operateurs"></a> Les opérateurs
 
-Les opérateurs sont des symboles permettant de manipuler et d’effectuer des operations mathématiques sur des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, il en existe plusieurs types:
+Les opérateurs sont des symboles permettant de manipuler et d’effectuer des operations mathématiques sur des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>.
 
 
-##Les opérateurs de calcul  
+## Les opérateurs de calcul  
 
 Permettent d'effectuer des opérations mathématiques simples sur/entre des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>
 
@@ -171,9 +182,7 @@ Permettent d'effectuer des opérations mathématiques simples sur/entre des <a h
 | **%**     | modulo (rends le reste de la division)                                     |
 | **=**     | affectation  (à ne pas confondre avec **==**, l'opérateur de vérification) |
 
-
-
-##Les opérateurs d'assignation
+## Les opérateurs d'assignation
 
 Permet d'effectuer une opération de calcule à une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> et d'affecter son resultat à cette même <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> 
 (exemple: 
@@ -193,8 +202,7 @@ Permet d'effectuer une opération de calcule à une <a href="https://fr.wikipedi
 | **/=**    | divise deux valeurs et stocke le résultat dans la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>     |
 | **%=**    | module deux valeurs et stocke le résultat dans la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>     |
 
-
-##Les opérateurs d'incrémentation
+## Les opérateurs d'incrémentation
 
 Permet d'augmenter ou diminuer d'une unité une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> (utile pour les boucles par exemple)
 
@@ -203,7 +211,7 @@ Permet d'augmenter ou diminuer d'une unité une <a href="https://fr.wikipedia.or
 | **++**    | augmente d'une unité la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> |
 | **--**    | diminue d'une unité la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>  |
 
-##Les opérateurs de comparaison
+## Les opérateurs de comparaison
 
 Permettent d'effectuer des opérations de comparaison entre des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, retournent  TRUE or FALSE
 
@@ -216,7 +224,7 @@ Permettent d'effectuer des opérations de comparaison entre des <a href="https:/
 | **>=**    | superiorité         |
 | **!=**    | différence          |
 
-##Les opérateurs logiques
+## Les opérateurs logiques
 
 Permet de vérifier si des conditions sont vraies
 
@@ -267,7 +275,6 @@ On peut effectuer une affectation ou assignation (donner une valeur) en déclara
 **Lors de sa création une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> reçoit toujours une valeur par défaut** . (0 pour les entiers, 0.0 pour les flottants, false pour les booléens, null pour les objets).
 
 **Le signe égal ( = ) est le symbole basique d'assignation.**
-
 
 ```
 // déclaration de a comme entier
@@ -395,7 +402,7 @@ int nombre2 = 1 + 1;
 
 Un programme informatique est constitué d'une suite d'instructions qui s'exécutent dans un `bloc d'instructions`.
 
-### Déclaration d'un bloc d'instructions
+## Déclaration d'un bloc d'instructions
 
 En <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>, un bloc d'instructions se déclare entre crochets `{}`
 
@@ -523,7 +530,7 @@ public void function maMethode(){
 
 ```
 
-`nombre` est défini en amont des blocs d'instruction if et else dans la méthode `maMethode`, les blocs d'instruction enfants peuvent donc récupérer la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> `nombre`.
+`nombre` est défini en amont des blocs d'instruction `if` et `else` dans la méthode `maMethode`, les blocs d'instruction enfants peuvent donc récupérer la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> `nombre`.
 
 Un bloc d'instruction enfant peut lire les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> de son parent mais pas l'inverse, la fin d'une instruction signifiant la fin de vie de toutes les instructions à l'intérieur. 
 
@@ -543,6 +550,7 @@ En général, l'insertion de commentaire se fait soit en fin de ligne, soit sur 
 - Types de commentaires en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> :
 
 **1-Commentaire sur une seule ligne**
+
 La première consiste à placer un double slash `//` 
 
 ```java
@@ -555,8 +563,8 @@ public class Main {
 ```
 
 
-
 **2-Commentaire sur plusieurs lignes**
+
 La seconde solution est d'encadrer le texte par un slash suivi d'une étoile (/*) et la même séquence inversée (*/)
 
 ```java
@@ -613,14 +621,11 @@ public class Main {
 
 ```
 
-
 # <a id="condition"></a>Les conditions
-
-
 
 Une condition va vous permettre d'exécuter une portion de code ou non en fonction du résultat de <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> booléennes, c'est à dire que vous pourrez dire "si X est faux alors je fais ça, sinon ceci et si aucune des conditions précédentes n'est remplie, je ferais plutôt cela".
 
-### Exemple d'une condition
+## Exemple d'une condition
 
 ```java
 public boolean variable = true;
@@ -632,7 +637,7 @@ if(variable == true)
 }
 ```
 
-### Les opérateurs de comparaison
+## Les opérateurs de comparaison
 
 Permet de comparer des valeurs ou de savoir si la condition est vrai ou fausse 
 
@@ -648,7 +653,7 @@ public int var = 5;
 | >=        | Opérateur de superiorité        | Vérifie qu'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> est supérieure ou égale à une valeur | var >= 2 | Retourne vrai car 5 et superieur a 2         |
 | !=        | Operateur de différence         | Vérifie qu'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> est supérieure ou égale à une valeur | var != 5 | Retourne faux car 5 n'est pas different de 5 |
 
-### Autres exemples 
+## Autres exemples
 
 ```java
 public int variable = 5;
@@ -670,11 +675,10 @@ if(variable <= 5)
 }
 ```
 
-# Sinon (else)
+## Sinon (else)
 Il existe une autre facon d'écrire des conditions que seulement avec des si (if) on peut ecrire une condition avec un sinon(else) à la suite d'un if(si), else signifie que si une condition et pas vrai alors on execute un autre bout de code 
 
-
-### Exemple avec Else
+## Exemple avec Else
 
 ```java
 public int variable = 10;
@@ -691,7 +695,9 @@ if(variable <= 5)
 ```
 
 On peut aussi combiné un else avec un if
-### Exemple avec Else If
+
+## Exemple avec Else If
+
 ```java
 public int variable = 10;
 
@@ -706,14 +712,11 @@ if(variable <= 5)
 }
 ```
 
-
 # <a id="boucle"></a>Les boucles
-
 
 Les boucles permettent de **répéter une ou plusieurs instructions**, selon les conditions désirées.
 
 On en compte plusieurs types:
-
 
 # La boucle FOR
 
@@ -776,8 +779,6 @@ while(i<20){
     i++;
 }
 ```
-
-
 
 # La boucle DO... WHILE
 
@@ -865,7 +866,7 @@ public int function Multiplication(int nombre1, int nombre2){
 }
 ```
 
-### <a id=""></a>Déclaration d'une méthode de classe
+## <a id=""></a>Déclaration d'une méthode de classe
 
 La déclarion d'une méthode de classe/fonction s'éffectue d'abord par la déclaration de sa portée.
 
@@ -907,8 +908,6 @@ Le traitement des arguments et autres opérations propres à la fonction se déc
 Si la méthode renvoit un résultat, le bloc d'instruction se terminera par l'instruction `return` puis le résultat à retourner.
 
 Une fois la fonction déclarée, il est ensuite possible de l'utiliser à l'infini en l'appelant dans notre code:
-
-
 
 ```java
 
