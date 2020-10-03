@@ -1,5 +1,7 @@
 # <p style="text-align:center;"> Découverte de l'algorithme avec <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/483px-Java_Logo.svg.png" widht="100px" height="100px"></p>
 
+<p style="text-align:right;"> Par Frank, Gino, Hamza, Vivien.</p>
+
 1. [La notion de variable](#variable-notion)
 2. [Les types de variable](#variable-type)
 3. [Les mots clés](#mot-cle)
@@ -50,7 +52,7 @@ Ou bien s'il y a plusieurs <a href="https://fr.wikipedia.org/wiki/Variable_(info
 ## Affectation d'une donnée à une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>:
 La déclaration d'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> réserve un emplacement mémoire où stocker la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>, et une valeur par défaut (généralement 0, null ou false), pour modifier cette valeur par défaut, il faut faire une affectation, c'est-à-dire préciser la donnée qui va être stockée à l'emplacement mémoire qui a été réservé.  
 
-Pour cela on utilise l'opérateur d'affectation "_=_" :
+Pour cela on utilise l'opérateur d'affectation "`.`" :
 nomDeVariable = valeur;
 Il est aussi possible d'initialiser les valeurs lors de leurs déclarations.
 type nomDeVariable = valeur;
@@ -72,7 +74,7 @@ Il est interdit d'avoir deux <a href="https://fr.wikipedia.org/wiki/Variable_(in
 
 ## Définitions de constantes:
 
-Une constante est une donnée dont la valeur est inchangeable lors de l'exécution d'un programme. Le mot clé _final_ permet de faire cela. Toutefois on ne peut véritablement parler de constantes en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> que pour les types primitifs, car pour un objet le mot clé final impose seulement que la référence de l'objet n'est pas modifiable, mais les champs de l'objets peuvent être modifiés malgré tout.  
+Une constante est une donnée dont la valeur est inchangeable lors de l'exécution d'un programme. Le mot clé _final_ permet de faire cela. Toutefois on ne peut véritablement parler de constantes en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> que pour les **types** primitifs, car pour un objet le mot clé final impose seulement que la référence de l'objet n'est pas modifiable, mais les champs de l'objets peuvent être modifiés malgré tout.  
   
 Par convention, et pour les distinguer des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, les constantes sont écrites entièrement en majuscules, et le caractère _ peut être utilisé pour séparer deux mots.
 
@@ -80,14 +82,14 @@ final int MA_CONSTANTE =12
 
 aura pour effet de définir une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> de type _int_ possèdant la valeur 12 et ne pouvant pas être modifiée dans la suite du code, auquel cas le compilateur générera une erreur...
 
-# <a id="variable-type"></a>Les types de variables</a> :
+# <a id="variable-type"></a>Les **types** de variables</a> :
 
 **Les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>** se divisent en plusieurs **types**, permettant ainsi de stocker des données différentes selon le besoin.
 Lors de la **déclaration** d'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>, il faut spécifier son type. Toute <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>, en plus de son nom, se doit d'avoir un type. 
 
-## Les types primitifs :
+## Les **types** primitifs :
 
-Il existe 8 types primitifs en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>
+Il existe 8 **types** primitifs en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>
 
 `boolean` : ne prend en compte que 2 valeurs, **true** et **false**.
 
@@ -103,7 +105,7 @@ Il existe 8 types primitifs en <a href="https://fr.wikipedia.org/wiki/Java_(tech
 
 `long` : nombre entier relatif court (entre `-32 768` et `32 767`).
 
-## Les types flottants :
+## Les **types** flottants :
 `float` et `double` se distinguent par la taille de leur représentation, et par conséquent par la précision et l'étendue des valeurs.
 
 `float` : nombre décimal, permettant la virgule (entre − 3 , 4.10^38 et 3 , 4.10^38).
@@ -137,13 +139,13 @@ On trouve plus de 50 mots clés qui ont les usages propres en <a href="https://f
 
 On ne peut les utiliser que dans un contexte précis et il est impossible de les déclarer en comme noms de classes ou <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>. 
 
-On retrouve différents types de <a href="https://thierry-leriche-dessirier.developpez.com/tutoriels/java/mots-cles-java/">mots-clés</a> pour déclarer des objets, des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, des états, des branchements et encore des exceptions.
+On retrouve différents **types** de <a href="https://thierry-leriche-dessirier.developpez.com/tutoriels/java/mots-cles-java/">mots-clés</a> pour déclarer des objets, des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, des états, des branchements et encore des exceptions.
 
 Déclarer des objets:
 
  `class`, `interface`, `implements`, `enum`, `import`, `this`, `abstract`, `extends`, `package`, `super`, `native`.
 
-Déclarer des types:
+Déclarer des **types**:
 
 `boolean`, `char`, `int`, `float`, `long`, `short`, `double`, `byte` & `void`.
 
@@ -341,9 +343,7 @@ Dans le code précédent, les instructions sont soit indépendantes, soit dépen
 
 Il ne serait pas possible d'assigner de à `nombre3` si `nombre1` et `nombre2` avaient été déclarés après.
 
-```java 
-
-int nombre3 = nombre2 + nombre1; // Erreur, nombre1 et nombre2 n'existent pas encore
+```javaint nombre3 = nombre2 + nombre1; // Erreur, nombre1 et nombre2 n'existent pas encore
 
 int nombre1 = 1; 
 
@@ -546,8 +546,8 @@ En général, l'insertion de commentaire se fait soit en fin de ligne, soit sur 
 - Ils ne sont pas pris en compte par le compilateur donc 
 - ils ne sont pas inclus dans le pseudo code
 - ils ne terminent pas par un ;
-- Il existe trois types de commentaires en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>.
-- Types de commentaires en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> :
+- Il existe trois **types** de commentaires en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>.
+- **types** de commentaires en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> :
 
 **1-Commentaire sur une seule ligne**
 
@@ -716,7 +716,7 @@ if(variable <= 5)
 
 Les boucles permettent de **répéter une ou plusieurs instructions**, selon les conditions désirées.
 
-On en compte plusieurs types:
+On en compte plusieurs **types**:
 
 # La boucle FOR
 
@@ -949,7 +949,6 @@ direBonjour("Hey bonjour vous!");
 Les paramètres sont aussi utilisé dans le cadre des conditions et des boucles
 
 ```java 
-
 boolean jeSuisVrai = false;
 
 if(jeSuisVrai){
