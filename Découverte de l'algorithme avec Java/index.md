@@ -14,116 +14,113 @@
 12. [La fonction](#fonction)
 13. [Les paramètres](#parametre)
 
-# <a id="variable-notion"></a>la Notion de variable
+# <a id="variable-notion">La notion de variable</a>
 
-## Le concept de variable
+## Définition
 
-Une variable est un symbole qui associe un nom à une valeur. 
+Une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)"><a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a></a> est un symbole qui associe un nom à une valeur.
 
 En informatique, cette valeur est stockée en mémoire dans l'attente d'un résultat.
 
-Les variables en langage Java sont typées. Elles peuvent être déclarée comme étant un chiffre, un caractère, un chaîne de caractères etc. 
+En <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>, les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> sont typées. Elles peuvent être déclarée comme étant un chiffre, un caractère, un chaîne de caractères etc. La façon dont elle seront traitées découlera de ce type.
 
-La façon dont elle seront traitées découlera de ce type.
+La longueur d'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> est illimitée mais le compilateur ne prendra en compte que les 247 premiers caractères.
 
-En Java, les noms de variables peuvent être aussi long que l'on désire, toutefois le compilateur(programme qui traite les instructions écrites dans un langage de programmation donné pour les traduire en langage machine, ou « code », utilisé par le processeur d'un ordinateur) ne tiendra compte "que" des 247 premiers caractères. De plus, elles doivent répondre à certains critères :
+Elle doit aussi respecter certaines règles: 
 
--   un nom de variable ne peut comporter que des lettres, des chiffres (les caractères _ et $ peuvent être utilisés mais ne devrait pas l'être pour des variables)
--   un nom de variable ne peut pas commencer par un chiffre et ne doit pas comporter d'espace
+- Elle ne peut comporter que des lettres, des chiffres. `_` et `$` sont autorisés mais déconseillés
+- Elle ne doit pas commencer par un chiffre
+- Elle ne doit pas comporter d'espace
 
-Les noms de variables sont sensibles à la casse (majusculte/minuscule). la variable `bonjour` ne sera  pas traitée comme `BonJouR`.
+Les noms de <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> sont sensibles à la casse (majusculte/minuscule). la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> `bonjour` ne sera  pas traitée comme `BonJouR`.
 
-Par convention, un nom de variable est écrit en minuscules, sans accent, ni _ ou $. En revanche lorsqu'il est composé de plusieurs mots, on peut utiliser une majuscule pour l'initiale de chaque nouveau mot.
-
-**Exemples de variables correctes**:
-      nomDeVariable ; nomDeVariables123
+Les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> s'écrivent en <a href="https://fr.wikipedia.org/wiki/Camel_case">CamelCase</a> : `maVariable`, `DireBonjour` ...
 
 
-## La déclaration des variables:
+## La déclaration des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>:
 
-Pour pouvoir utiliser une variable, il faut la définir, c'est-à-dire lui donner un nom, mais surtout un type de donnée à stocker afin qu'un espace mémoire conforme au type de donnée qu'elle contient lui soit réservé.
-Une variable se déclare de la façon suivante :   type nomDeVariable ;
+Pour pouvoir utiliser une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>, il faut la définir, c'est-à-dire lui donner un nom, mais surtout un type de donnée à stocker afin qu'un espace mémoire conforme au type de donnée qu'elle contient lui soit réservé.
+Une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> se déclare de la façon suivante :   type nomDeVariable ;
 
-Ou bien s'il y a plusieurs variables du même type :  type nomDeVariables ; ou nom_De_Variables2 ;
+Ou bien s'il y a plusieurs <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> du même type :  type nomDeVariables ; ou nom_De_Variables2 ;
 
--   Java impose que les variables soient impérativement déclarées avant d'être utilisée.
--   Java permet de définir une variable à n'importe quel endroit du code.                 
+-   <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> impose que les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> soient impérativement déclarées avant d'être utilisée.
+-   <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> permet de définir une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> à n'importe quel endroit du code.                 
 
-## Affectation d'une donnée à une variable:
-La déclaration d'une variable réserve un emplacement mémoire où stocker la variable, et une valeur par défaut (généralement 0, null ou false), pour modifier cette valeur par défaut, il faut faire une affectation, c'est-à-dire préciser la donnée qui va être stockée à l'emplacement mémoire qui a été réservé.  
+## Affectation d'une donnée à une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>:
+La déclaration d'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> réserve un emplacement mémoire où stocker la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>, et une valeur par défaut (généralement 0, null ou false), pour modifier cette valeur par défaut, il faut faire une affectation, c'est-à-dire préciser la donnée qui va être stockée à l'emplacement mémoire qui a été réservé.  
 
 Pour cela on utilise l'opérateur d'affectation "_=_" :
 nomDeVariable = valeur;
 Il est aussi possible d'initialiser les valeurs lors de leurs déclarations.
 type nomDeVariable = valeur;
 
-Exemple : Pour stocker le caractère B dans une variable que l'on appellera  _caractere_, il faudrait écrire :  
+Exemple : Pour stocker le caractère B dans une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> que l'on appellera  _caractere_, il faudrait écrire :  
 
 char caractere = 'B';
-Ce qui signifie _"stocker la valeur Unicode de la lettre B dans la variable nommée 'caractere'_.
+Ce qui signifie _"stocker la valeur Unicode de la lettre B dans la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> nommée 'caractere'_.
 
-## Portée (visibilité) des variables :
+## Portée (visibilité) des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> :
 
-Selon l'endroit où on déclare une variable, celle-ci pourra être accessible (visible) de partout dans le code ou bien que dans une portion confinée de celui-ci (à l'intérieur d'une méthode par exemple), on parle de  _portée_  d'une variable.  
+Selon l'endroit où on déclare une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>, celle-ci pourra être accessible (visible) de partout dans le code ou bien que dans une portion confinée de celui-ci (à l'intérieur d'une méthode par exemple), on parle de  _portée_  d'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>.  
 
-Lorsqu'une variable est déclarée directement dans la classe, c'est-à-dire à l'extérieur de toute méthode, elle sera accessible dans toute la classe. On parle alors de  _champ_  de la classe (fields, en anglais). Elle représente l'état de l'objet courant (ou avec le mot clé static, l'état de la classe elle même).  
+Lorsqu'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> est déclarée directement dans la classe, c'est-à-dire à l'extérieur de toute méthode, elle sera accessible dans toute la classe. On parle alors de  _champ_  de la classe (fields, en anglais). Elle représente l'état de l'objet courant (ou avec le mot clé static, l'état de la classe elle même).  
 
-Lorsque l'on déclare une variable à l'intérieur d'un bloc d'instructions (entre des accolades), sa portée se restreint à l'intérieur de ce bloc (dans les lignes qui suit sa déclaration), on parle alors de variable locale.  
+Lorsque l'on déclare une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> à l'intérieur d'un bloc d'instructions (entre des accolades), sa portée se restreint à l'intérieur de ce bloc (dans les lignes qui suit sa déclaration), on parle alors de <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> locale.  
 
-Il est interdit d'avoir deux variables de même nom si elles ont une portée commune. Il serait alors impossible de les distinguer...
+Il est interdit d'avoir deux <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> de même nom si elles ont une portée commune. Il serait alors impossible de les distinguer...
 
 ## Définitions de constantes:
 
-Une constante est une donnée dont la valeur est inchangeable lors de l'exécution d'un programme. Le mot clé _final_ permet de faire cela. Toutefois on ne peut véritablement parler de constantes en Java que pour les types primitifs, car pour un objet le mot clé final impose seulement que la référence de l'objet n'est pas modifiable, mais les champs de l'objets peuvent être modifiés malgré tout.  
+Une constante est une donnée dont la valeur est inchangeable lors de l'exécution d'un programme. Le mot clé _final_ permet de faire cela. Toutefois on ne peut véritablement parler de constantes en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> que pour les types primitifs, car pour un objet le mot clé final impose seulement que la référence de l'objet n'est pas modifiable, mais les champs de l'objets peuvent être modifiés malgré tout.  
   
-Par convention, et pour les distinguer des variables, les constantes sont écrites entièrement en majuscules, et le caractère _ peut être utilisé pour séparer deux mots.
+Par convention, et pour les distinguer des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, les constantes sont écrites entièrement en majuscules, et le caractère _ peut être utilisé pour séparer deux mots.
 
 final int MA_CONSTANTE =12
 
-aura pour effet de définir une variable de type _int_ possèdant la valeur 12 et ne pouvant pas être modifiée dans la suite du code, auquel cas le compilateur générera une erreur...
+aura pour effet de définir une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> de type _int_ possèdant la valeur 12 et ne pouvant pas être modifiée dans la suite du code, auquel cas le compilateur générera une erreur...
 
 
 
-# <a id="variable-type"></a>Les types de variables :
+# <a id="variable-type"></a>Les types de variables</a> :
 
 
-**Les variables** se divisent en plusieurs **types**, permettant ainsi de stocker des données différentes selon le besoin.
-Lors de la **déclaration** d'une variable, il faut spécifier son type. Toute variable, en plus de son nom, se doit d'avoir un type. 
+**Les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>** se divisent en plusieurs **types**, permettant ainsi de stocker des données différentes selon le besoin.
+Lors de la **déclaration** d'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>, il faut spécifier son type. Toute <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>, en plus de son nom, se doit d'avoir un type. 
 
 ## Les types primitifs :
 
-#### boolean : 
-ne prend en compte que 2 valeurs, **true** et **false**.
-#### char (character) : 
-permet de stocker la valeur Unicode d'un caractère (entre '\u0000' et '\uffff').
+Il existe 8 types primitifs en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>
 
-### Les types entier :
+`boolean` : ne prend en compte que 2 valeurs, **true** et **false**.
 
-#### byte : 
-nombre entier relatif très court (entre -128 et 127).
-#### short : 
-nombre entier relatif court (entre -32 768 et 32 767).
-#### int (integrer) : 
-nombre entier relatif (entre -2 147 483 648 et 2 147 483 647).
-#### long : 
-nombre entier relatif court (entre -32 768 et 32 767).
+`char` : chractère au format unincode (compris entre `\u0000` et `\uffff`).
+
+### Les entiers :
+
+`byte` : nombre entier relatif très court (entre `-128` et `127`).
+
+`short` : nombre entier relatif court (entre `-32 768` et `32 767`).
+
+`int` : nombre entier relatif (entre `-2 147 483 648` et `2 147 483 647`).
+
+`long` : nombre entier relatif court (entre `-32 768` et `32 767`).
 
 ### Les types flottants :
-**float** et **double** se distinguent par la taille de leur représentation, et par conséquent par la précision et l'étendue des valeurs.
+`float` et `double` se distinguent par la taille de leur représentation, et par conséquent par la précision et l'étendue des valeurs.
 
-#### float : 
-nombre décimal, permettant la virgule (entre − 3 , 4.10^38 et 3 , 4.10^38).
-#### double : 
-nombre décimal, permettant la virgule (entre − 1 , 7.10^308 et 1 , 7.10^308).
+`float` : nombre décimal, permettant la virgule (entre − 3 , 4.10^38 et 3 , 4.10^38).
+
+`double` : nombre décimal, permettant la virgule (entre − 1 , 7.10^308 et 1 , 7.10^308).
 
 
 ## Affectation :
 
-Une **affectation** équivaut à mettre une valeur dans une variable.
-Comment affecter la valeur d'une variable?
+Une **affectation** équivaut à mettre une valeur dans une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>.
+Comment affecter la valeur d'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>?
 
 * taper une valeur littéral après le signe égal : x = 12; test = true;
-* affecter la valeur d'une variable à une autre : y = x;
+* affecter la valeur d'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> à une autre : y = x;
 * employer une expression combinant les deux : x = y + 3;
 
 #### Exemples : 
@@ -139,9 +136,9 @@ float = 32.4f; // le f différencie les floats des doubles.
 # <a id="mot-cle"></a> Les mots clés
 
 Les mots-clés sont des termes spécifiques au langage de programmation, certains sont utilisables par plusieurs langages et d'autres spécifiques à un langage.
-On trouve plus de 50 mots clés qui ont les usages propres en java.
-On ne peut les utiliser que dans un contexte précis et il est impossible de les déclarer en comme noms de classes ou variables. 
-On retrouve différents types de mots-clés; des mots-clés pour déclarer des objets, variables, des états, des branchements et encore des exceptions.
+On trouve plus de 50 mots clés qui ont les usages propres en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>.
+On ne peut les utiliser que dans un contexte précis et il est impossible de les déclarer en comme noms de classes ou <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>. 
+On retrouve différents types de mots-clés; des mots-clés pour déclarer des objets, <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, des états, des branchements et encore des exceptions.
 
 Les mots pour les objets; "class", "interface", "implements", "enum", "import", "this", "abstract", "extends", "package", "super" &"native".
 
@@ -158,12 +155,12 @@ Et voici les mots-clés pour gérer des exceptions; "throw", "throws", "try", "c
 
 # <a id="operateurs"></a> Les opérateurs
 
-Les opérateurs sont des symboles permettant de manipuler et d’effectuer des operations mathématiques sur des variables, il en existe plusieurs types:
+Les opérateurs sont des symboles permettant de manipuler et d’effectuer des operations mathématiques sur des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, il en existe plusieurs types:
 
 
 ##Les opérateurs de calcul  
 
-Permettent d'effectuer des opérations mathématiques simples sur/entre des variables
+Permettent d'effectuer des opérations mathématiques simples sur/entre des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>
 
 | Opérateur | Effet                                                                      |
 | --------- | -------------------------------------------------------------------------- |
@@ -178,7 +175,7 @@ Permettent d'effectuer des opérations mathématiques simples sur/entre des vari
 
 ##Les opérateurs d'assignation
 
-Permet d'effectuer une opération de calcule à une variable et d'affecter son resultat à cette même variable 
+Permet d'effectuer une opération de calcule à une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> et d'affecter son resultat à cette même <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> 
 (exemple: 
 ```java
  x = x+1
@@ -188,27 +185,27 @@ Permet d'effectuer une opération de calcule à une variable et d'affecter son r
   x += 1
   ```
 
-| Opérateur | Effet                                                          |
-| --------- | -------------------------------------------------------------- |
-| **+=**    | additionne deux valeurs et stocke le résultat dans la variable |
-| **-=**    | soustrait deux valeurs et stocke le résultat dans la variable  |
-| ***=**    | multiplie deux valeurs et stocke le résultat dans la variable  |
-| **/=**    | divise deux valeurs et stocke le résultat dans la variable     |
-| **%=**    | module deux valeurs et stocke le résultat dans la variable     |
+| Opérateur | Effet                                                                                                                              |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **+=**    | additionne deux valeurs et stocke le résultat dans la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> |
+| **-=**    | soustrait deux valeurs et stocke le résultat dans la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>  |
+| ***=**    | multiplie deux valeurs et stocke le résultat dans la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>  |
+| **/=**    | divise deux valeurs et stocke le résultat dans la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>     |
+| **%=**    | module deux valeurs et stocke le résultat dans la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>     |
 
 
 ##Les opérateurs d'incrémentation
 
-Permet d'augmenter ou diminuer d'une unité une variable (utile pour les boucles par exemple)
+Permet d'augmenter ou diminuer d'une unité une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> (utile pour les boucles par exemple)
 
-| Opérateur | Effet                            |
-| --------- | -------------------------------- |
-| **++**    | augmente d'une unité la variable |
-| **--**    | diminue d'une unité la variable  |
+| Opérateur | Effet                                                                                                |
+| --------- | ---------------------------------------------------------------------------------------------------- |
+| **++**    | augmente d'une unité la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> |
+| **--**    | diminue d'une unité la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>  |
 
 ##Les opérateurs de comparaison
 
-Permettent d'effectuer des opérations de comparaison entre des variables, retournent  TRUE or FALSE
+Permettent d'effectuer des opérations de comparaison entre des <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a>, retournent  TRUE or FALSE
 
 | Opérateur | Effet               |
 | --------- | ------------------- |
@@ -223,17 +220,17 @@ Permettent d'effectuer des opérations de comparaison entre des variables, retou
 
 Permet de vérifier si des conditions sont vraies
 
-| Opérateur | Dénomination | Effet                                                                        |
-| --------- | ------------ | ---------------------------------------------------------------------------- |
-| **ll**    | OU logique   | Retourne true si au moins une des deux conditions vaut true (ou false sinon) |
-| **&&**    | ET logique   | Retourne true si les deux conditions valent true (ou false sinon)            |
-| **!**     | NON logique  | Retourne true si la variable vaut false, et false si elle vaut true)         |
+| Opérateur | Dénomination | Effet                                                                                                                                    |
+| --------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| **ll**    | OU logique   | Retourne true si au moins une des deux conditions vaut true (ou false sinon)                                                             |
+| **&&**    | ET logique   | Retourne true si les deux conditions valent true (ou false sinon)                                                                        |
+| **!**     | NON logique  | Retourne true si la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> vaut false, et false si elle vaut true) |
 
 # <a id="evaluation"></a>L'évaluation 
 
-Lorsque une opération doit avoir lieux, la priorité opératoire s'applique. Par exemple, comme vu précédemment, les variables de type *double* contiennent plus d'informations de type *int*.
+Lorsque une opération doit avoir lieux, la priorité opératoire s'applique. Par exemple, comme vu précédemment, les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> de type *double* contiennent plus d'informations de type *int*.
 
-Lors d'une opération, Java va donc retourner un résultat de l'opération qui sera **"caster"** selon les type de variable.
+Lors d'une opération, <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> va donc retourner un résultat de l'opération qui sera **"caster"** selon les type de <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>.
 
 > int nbre1 = 3  
 int nbre2= 2  
@@ -247,27 +244,27 @@ int nbre2= 2
 double resultat = double(nbre1) / double(nbre2)  
 // le résultat sera 1.5
 
-Ainsi en Java, chaque membre d'une opération passe automatiquement et implicitement par une évaluation de son type et par un cast si besoin.
+Ainsi en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>, chaque membre d'une opération passe automatiquement et implicitement par une évaluation de son type et par un cast si besoin.
 
 Lorsque l’opérande de gauche n’est pas un tableau, il s'éxecute dans cet ordre:
 
-1. Vérifier que l’opérande est une variable déclarée
+1. Vérifier que l’opérande est une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> déclarée
 2. Sauvegarder la valeur de l’opérande gauche
 
 3. Évaluer l’opérande de droite
 
 4. Effectuer l’opération binaire indiquée par l’opérateur composé
 
-5. Convertir le résultat de l’opération binaire en type de variable de gauche **(casting implicite)** . Affecter le résultat converti à la variable de gauche
+5. Convertir le résultat de l’opération binaire en type de <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> de gauche **(casting implicite)** . Affecter le résultat converti à la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> de gauche
 
 # <a id="assignation"></a>L'assignation
 
-En programmation informatique, une affectation, ou assignation, est une structure qui permet d'attribuer une valeur à une variable.
+En programmation informatique, une affectation, ou assignation, est une structure qui permet d'attribuer une valeur à une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>.
 
 
-En JAVA, **il faut déclarer toute les variables en précisant leur type** . On peut éventuellement ajouter des modificateurs. Ainsi déclarer une variable « final » revient à créer une constante car le compilateur refusera toutes les instructions modifiant la valeur de cette variable.  
-On peut effectuer une affectation ou assignation (donner une valeur) en déclarant une variable.  
-**Lors de sa création une variable reçoit toujours une valeur par défaut** . (0 pour les entiers, 0.0 pour les flottants, false pour les booléens, null pour les objets).
+En <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>, **il faut déclarer toute les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> en précisant leur type** . On peut éventuellement ajouter des modificateurs. Ainsi déclarer une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> « final » revient à créer une constante car le compilateur refusera toutes les instructions modifiant la valeur de cette <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>.  
+On peut effectuer une affectation ou assignation (donner une valeur) en déclarant une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a>.  
+**Lors de sa création une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> reçoit toujours une valeur par défaut** . (0 pour les entiers, 0.0 pour les flottants, false pour les booléens, null pour les objets).
 
 **Le signe égal ( = ) est le symbole basique d'assignation.**
 
@@ -279,7 +276,7 @@ int a ;
 a = 3;
 ```
 
-Cette instruction déclare une nouvelle variable x , attribue à x la valeur de 3 et renvoie 3 .
+Cette instruction déclare une nouvelle <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> x , attribue à x la valeur de 3 et renvoie 3 .
 
 Il existe d'autre opérateur d'assignation :
 
@@ -305,7 +302,7 @@ Une instruction dicte à l'ordinateur l'action nécessaire qu'il doit effectuer 
 
 Un programme informatique est constitué d'une suite d'instructions.
 
-En java, une instruction se termine par un point virgule `;`
+En <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>, une instruction se termine par un point virgule `;`
 
 ```exemples
 
@@ -319,7 +316,7 @@ String resultat2 = "Je suis un texte" // une troisième instruction
 
 Les instructions se lisent de haut en bas.
 
-```en java
+```java
 
 int nombre1 = 1; // première instruction
 
@@ -337,7 +334,7 @@ Dans le code précédent, les instructions sont soit indépendantes, soit dépen
 
 Il ne serait pas possible d'assigner de à `nombre3` si `nombre1` et `nombre2` avaient été déclarés après.
 
-```en java
+```java 
 
 int nombre3 = nombre2 + nombre1; // Erreur, nombre1 et nombre2 n'existent pas encore
 
@@ -355,7 +352,7 @@ Une instruction informatique désigne une étape dans un programme informatique.
 
 Une instruction dicte à l'ordinateur l'action nécessaire qu'il doit effectuer avant de passer à l'instruction suivante. 
 
-En java, une instruction se termine par un point virgule `;`
+En <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>, une instruction se termine par un point virgule `;`
 
 ```java
 
@@ -400,7 +397,7 @@ Un programme informatique est constitué d'une suite d'instructions qui s'exécu
 
 ### Déclaration d'un bloc d'instructions
 
-En java, un bloc d'instructions se déclare entre crochets `{}`
+En <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>, un bloc d'instructions se déclare entre crochets `{}`
 
 Les conditions `if/else/else if` sont des blocs d'instructions.
 
@@ -482,7 +479,7 @@ public class MaClasse{
 
 Chaque bloc d'instruction définit la durée de vie des instructions qui sont déclarées à l'intérieur.
 
-Ainsi dans une fonction, les instructions à l'intérieur ne sont pas accessibles à l'extérieur. Les variables déclarées à l'intérieur n'existent plus une fois le bloc d'instruction terminé
+Ainsi dans une fonction, les instructions à l'intérieur ne sont pas accessibles à l'extérieur. Les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> déclarées à l'intérieur n'existent plus une fois le bloc d'instruction terminé
 
 ```java
 
@@ -498,7 +495,7 @@ System.out.println(addition) // Erreur, addition n'existe pas en dehors de la m�
 
 ```
 
-Si une variable est déclarée dans un bloc d'instruction, elle n'existe plus en dehors de ce bloc.
+Si une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> est déclarée dans un bloc d'instruction, elle n'existe plus en dehors de ce bloc.
 
 ```java
 
@@ -526,11 +523,11 @@ public void function maMethode(){
 
 ```
 
-`nombre` est défini en amont des blocs d'instruction if et else dans la méthode `maMethode`, les blocs d'instruction enfants peuvent donc récupérer la variable `nombre`.
+`nombre` est défini en amont des blocs d'instruction if et else dans la méthode `maMethode`, les blocs d'instruction enfants peuvent donc récupérer la <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> `nombre`.
 
-Un bloc d'instruction enfant peut lire les variables de son parent mais pas l'inverse, la fin d'une instruction signifiant la fin de vie de toutes les instructions à l'intérieur. 
+Un bloc d'instruction enfant peut lire les <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> de son parent mais pas l'inverse, la fin d'une instruction signifiant la fin de vie de toutes les instructions à l'intérieur. 
 
-Comme le bloc d'instruction parent n'est pas fini, ses variables sont encore accessibles.
+Comme le bloc d'instruction parent n'est pas fini, ses <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> sont encore accessibles.
 
 # <a id="commentaire"></a>Les commentaires
 
@@ -542,8 +539,8 @@ En général, l'insertion de commentaire se fait soit en fin de ligne, soit sur 
 - Ils ne sont pas pris en compte par le compilateur donc 
 - ils ne sont pas inclus dans le pseudo code
 - ils ne terminent pas par un ;
-- Il existe trois types de commentaires en Java.
-- Types de commentaires en Java :
+- Il existe trois types de commentaires en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>.
+- Types de commentaires en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a> :
 
 **1-Commentaire sur une seule ligne**
 La première consiste à placer un double slash `//` 
@@ -621,7 +618,7 @@ public class Main {
 
 
 
-Une condition va vous permettre d'exécuter une portion de code ou non en fonction du résultat de variables booléennes, c'est à dire que vous pourrez dire "si X est faux alors je fais ça, sinon ceci et si aucune des conditions précédentes n'est remplie, je ferais plutôt cela".
+Une condition va vous permettre d'exécuter une portion de code ou non en fonction du résultat de <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variables</a> booléennes, c'est à dire que vous pourrez dire "si X est faux alors je fais ça, sinon ceci et si aucune des conditions précédentes n'est remplie, je ferais plutôt cela".
 
 ### Exemple d'une condition
 
@@ -643,13 +640,13 @@ Permet de comparer des valeurs ou de savoir si la condition est vrai ou fausse
 public int var = 5;
 ```
 
-| Opérateur | Dénomination                    | Effet                                                        | Exemple  | Résultat                                     |
-| --------- | ------------------------------- | ------------------------------------------------------------ | -------- | -------------------------------------------- |
-| ==        | opérateur d'égalité             | Compare deux valeurs et vérifie leur égalité                 | var == 5 | Retourne vrai si var égale 5                 |
-| <         | opérateur d'infériorité stricte | Verifie qu'une variable est strictement inférieure           | var < 4  | Retourne faux car 5 et pas plus petit que 4  |
-| <=        | Opérateur d'inféririoté         | Vérifie qu'une variable inférieure ou egale                  | var <= 5 | Retourne vrai car 5 et egale a 5             |
-| >=        | Opérateur de superiorité        | Vérifie qu'une variable est supérieure ou égale à une valeur | var >= 2 | Retourne vrai car 5 et superieur a 2         |
-| !=        | Operateur de différence         | Vérifie qu'une variable est supérieure ou égale à une valeur | var != 5 | Retourne faux car 5 n'est pas different de 5 |
+| Opérateur | Dénomination                    | Effet                                                                                                                            | Exemple  | Résultat                                     |
+| --------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------- | -------------------------------------------- |
+| ==        | opérateur d'égalité             | Compare deux valeurs et vérifie leur égalité                                                                                     | var == 5 | Retourne vrai si var égale 5                 |
+| <         | opérateur d'infériorité stricte | Verifie qu'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> est strictement inférieure           | var < 4  | Retourne faux car 5 et pas plus petit que 4  |
+| <=        | Opérateur d'inféririoté         | Vérifie qu'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> inférieure ou egale                  | var <= 5 | Retourne vrai car 5 et egale a 5             |
+| >=        | Opérateur de superiorité        | Vérifie qu'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> est supérieure ou égale à une valeur | var >= 2 | Retourne vrai car 5 et superieur a 2         |
+| !=        | Operateur de différence         | Vérifie qu'une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> est supérieure ou égale à une valeur | var != 5 | Retourne faux car 5 n'est pas different de 5 |
 
 ### Autres exemples 
 
@@ -730,11 +727,11 @@ for( <initialisation> ; <condition> ;  <incrémentation>) {
 }
 ```
 
-Souvent, on utilise une variable temporaire qui garde le compte du nombre d'itérations. Elle est souvent appelée `i` comme *index*, et est un point de repère pour la boucle et le développeur ; mais elle peut s'appeler n'importe comment.
+Souvent, on utilise une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> temporaire qui garde le compte du nombre d'itérations. Elle est souvent appelée `i` comme *index*, et est un point de repère pour la boucle et le développeur ; mais elle peut s'appeler n'importe comment.
 
 - Dans l'**initialisation** de la boucle, on définit quel est l'état de la boucle avant sa première répétition ; par exemple
 `int i = 0`.
-Dans cet exemple, on définit une variable i étant égale à 0.
+Dans cet exemple, on définit une <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> i étant égale à 0.
 
 - Dans la **condition** de la boucle, on définit quel est la condition d'arrêt de la boucle ; par exemple
 `i <= 20`.
@@ -758,7 +755,7 @@ Cet exemple dans la console nous renverra à chaque répétition la valeur de `i
 
 ## FOR avec une array
 
-On peut utiliser For pour faire une action pour chaque variable d'une array, par exemple :
+On peut utiliser For pour faire une action pour chaque <a href="https://fr.wikipedia.org/wiki/Variable_(informatique)">variable</a> d'une array, par exemple :
 
 ```java
 for (int i=0; i<myArray.length; i++) {
@@ -828,7 +825,7 @@ while(i<20){
 
 Au moment où `i` sera égal à 5, la boucle s'arrêtera complêtement, alors même que `i` n'est pas encore supérieur ou égal à 20.
 
-## <a id="fonction"></a> La fonction (appelée méthode de classe en Java)
+## <a id="fonction"></a> La fonction (appelée méthode de classe en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>)
 
 La fonction ou méthode de classe est un bloc d'instruction réutilisable permettant de recevoir des arguments.
 
@@ -851,7 +848,6 @@ int multiplication = 4 * 7;
 Grâce aux fonctions, il est possible d'encapsuler ces opérations:
 
 ```java
-
 public int function Addition(int nombre1, int nombre2){
     return nombre1 + nombre2;
 }
@@ -867,7 +863,6 @@ public float function Division(float nombre1, float nombre2){
 public int function Multiplication(int nombre1, int nombre2){
     return nombre1 * nombre2;
 }
-
 ```
 
 ### <a id=""></a>Déclaration d'une méthode de classe
@@ -878,23 +873,22 @@ La déclarion d'une méthode de classe/fonction s'éffectue d'abord par la décl
 - `protected` : accès protégé. La méthode n'est disponible qu'à l'intérieur d'une classe. Elle peut être donc visible pour les classes héritantes. Elle est aussi visible pour des classes non héritantes mais étant du même package.
 - `private` : accès privé. La méthode n'est disponible qu'à l'intérieur d'une classe. Héritée, elle n'est pas visible.
  
-Puisqu'en java, tout est objet, une méthode appartient obligatoirement à une classe.
+Puisqu'en <a href="https://fr.wikipedia.org/wiki/Java_(technique)">Java</a>, tout est objet, une méthode appartient obligatoirement à une classe.
 
 une méthode de classe peut être déclarée `static`. Quand une méthode est déclarée `static`, elle ne peut être appelée que par la classe elle-même et non par une instance de classe. 
 
-```java
-
+```java 
 class MaClass{
     public static void MaMethodeStatique(){
-        System.out.print.ln('Je suis appelée par une classe");
+        System.out.println("Je suis appelée par une classe");
     }
 
     public void MaMethode(){
-        System.out.print.ln('Je suis appelée par une instance de classe");
+        System.out.println("Je suis appelée par une instance de classe");
     }
 }
-
 ```
+
 `MaMethodeStatique` ne peut être appelée que par `MaClass` quand `MaMethode` ne pourra être appelée que par une instance de `MaClass`
 
 Il faut ensuite définir le type de retour de la fonction.
